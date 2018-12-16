@@ -1,0 +1,64 @@
+@media(min-width: 768px) {
+    .container-1 {
+        /* this line below will pull each div into the same row. takes care of everything,
+        so no floats or widths required */
+        display: flex;
+        /* the line below will disable all divs being the same height, instead wrapping
+        around the content, starting from the top */
+        align-items: flex-start;
+        /* this does the same, but then from the bottom  */
+        align-items: flex-end;
+        align-items: center;
+        /* this is the default, not required: */
+        align-items: stretch;
+        /*  this line below would change the distribution to vertical instead of the
+            default row (horizontal)
+        flex-direction: column;
+            */
+    }
+
+    .container-2 {
+        display: flex;
+        /* this gives every item an even distribution, with white-space */
+        justify-content: space-between;
+        /* add some margin on ALL sides: */
+        justify-content: space-around;
+    }
+}
+
+.container-3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.container-1 div, .container-2 div, .container-3 div {
+    border: 1px #ccc solid;
+    padding: 10px;
+}
+
+.box-1 {
+    /* this determines width */
+    flex: 2;
+    /* this allows you to re-order the elements without touchting the template */
+    order: 2;
+}
+
+.box-2 {
+    flex: 1;
+    order: 1;
+}
+
+.box-3 {
+    flex: 1;
+    order: 3;
+}
+
+.container-2-box {
+    /* this is the flexbox width property */
+    flex-basis: 27%
+}
+
+.container-3-box {
+    flex-basis: 12%
+}
